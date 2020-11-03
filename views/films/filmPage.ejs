@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Films</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/films.css">
+</head>
+<body>
+    <%- include('../partials/nav.ejs') %>
+    <div class="container">
+        <div class="row">
+            <div class="col-4">
+                <img class="mt-5 filmPagePoster" src="<%= film.poster_link %> ">
+            </div>
+            <div class="col-8">
+                <h1 class="mt-5"><%= film.title %> (<%= film.release_year %>)</h1>
+                <h4 class="mt-4">Review: </h4>
+                <p class="pl-4"><%= film.review %> </p>
+                <h4>Rating: </h4>
+                <p class="pl-4"><span class="rating"><%= film.rating %> </span> /10</p>
+                <a href="/films/<%= film.id %>/edit "><button type="button" class="btn btn-outline-primary">Edit</button></a>
+                <form method='post' action='/films/<%= film._id %>?_method=DELETE' class="d-inline">
+                    <button class="btn btn-outline-danger">Delete</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="/js/app.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+</body>
+</html>

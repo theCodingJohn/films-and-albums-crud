@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Album</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/album.css">
+</head>
+<body>
+    <%- include('../partials/nav.ejs') %>
+    <div class="container d-flex flex-column align-items-center">
+        <h1 class="my-5">Add Album to Collection</h1>
+        <form method="POST" action="/music">
+            <div class="form-group row">
+                <label for="inputTitle" class="col-form-label">Album Title: </label>
+                  <input type="text" name='title' class="form-control" id="inputTitle" placeholder="Album title">
+            </div>
+            <div class="form-group row">
+                <label for="inputReleaseYear" class="col-form-label">Release Year: </label>
+                  <input type="number" name='release_year' min="1880" max="2100" class="form-control" id="inputReleaseYear" placeholder="Release year">
+            </div>
+            <div class="form-group row">
+                <label for="inputRating" class="col-form-label">Rating: </label>
+                  <input type="number" name='rating' min="0" max="10" class="form-control" id="inputRating" placeholder="Rating">
+            </div>
+            <div class="form-group row">
+                <label for="inputReview" class="col-form-label">Review: </label>
+                  <textarea name='review' class="form-control" id="inputReview" placeholder="Review"></textarea>
+            </div>
+            <div class="form-group row">
+                <label for="inputPosterLink" class="col-form-label">Artwork Link: </label>
+                  <input type="text" name='artwork_link' class="form-control" id="inputposterLink" placeholder="Artwork link">
+            </div>
+            <div class="form-group row mt-3">
+                <button class="btn btn-outline-success mr-5">Submit</button>
+            </div>
+        </form>
+    </div>
+    <script src="/js/app.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Films</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/album.css">
+</head>
+<body>
+    <%- include('../partials/nav.ejs') %>
+    <div class="container-fluid d-flex flex-column">
+        <h1 class="align-self-center my-5">Album Collection</h1>
+        <div>
+            <div class="grid">
+                <% for(let album of albums) {  %>
+                    <div class="d-flex flex-column align-items-center">
+                        <a href='music/<%= album._id %> '>
+                            <img class="artwork" src='<%= album.artwork_link %>'></a>
+                        <h3 class="my-2"><b><%= album.title %></b></h3>
+                    </div>
+                <% } %>  
+            </div>
+        </div>
+    </div>
+    <a id="add-btn" href="/music/add"><button class="btn btn-success">Add</button></a>
+    <script src="/js/app.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+</body>
+</html>

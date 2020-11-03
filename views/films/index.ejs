@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Films</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/films.css">
+</head>
+<body>
+    <%- include('../partials/nav.ejs') %>
+    <div class="container-fluid d-flex flex-column">
+        <h1 class="align-self-center my-5">Watched Films</h1>
+        <div>
+            <div class="grid">
+                <% for(let film of films) {  %>
+                    <div class="d-flex flex-column align-items-center">
+                        <a href='films/<%= film._id %> '>
+                            <img class="film-poster" src='<%= film.poster_link %>'></a>
+                        <h3 class="my-2"><b><%= film.title %></b></h3>
+                    </div>
+                <% } %>  
+            </div>
+        </div>
+    </div>
+    <a id="add-btn" href="/films/add"><button class="btn btn-success">Add</button></a>
+    <script src="/js/app.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+</body>
+</html>
