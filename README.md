@@ -4,9 +4,9 @@ This was made to practice working with mongodb, express and node.
 
 ## Features
 
-- User can "ADD" movie their watched list.
-- User can "DELETE" movie their watched list.
-- User can "EDIT" movie their watched list.
+- User can "ADD" movie to their watched list.
+- User can "DELETE" movie to their watched list.
+- User can "EDIT" movie to their watched list.
 
 ## Screenshots
 
