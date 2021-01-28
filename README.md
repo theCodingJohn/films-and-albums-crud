@@ -1,3 +1,5 @@
+![site demo](./md_assets/movies.gif)
+
 This was made to practice working with mongodb, express and node.
 
 ## Features
@@ -8,10 +10,10 @@ This was made to practice working with mongodb, express and node.
 
 ## Screenshots
 
-<img width="300" src="./MD_photos/photo3.png">
-<img width="300" src="./MD_photos/photo4.png">
-<img width="300" src="./MD_photos/photo2.png">
-<img width="300" src="./MD_photos/photo1.png">
+<img width="300" src="./md_assets/photo3.png">
+<img width="300" src="./md_assets/photo4.png">
+<img width="300" src="./md_assets/photo2.png">
+<img width="300" src="./md_assets/photo1.png">
 
 ## Tools
 
